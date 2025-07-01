@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Tekinha 💖</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <!-- TOPO COM FOTO E DEGRADE -->
+    <section id="inicio">
+      <div class="topo-imagem">
+        <img src="beijo.jpg" alt="Foto topo" />
+        <div class="degrade"></div>
+      </div>
+
+      <div class="caixa">
+        <h1>Tekinha, sua surpresa te espera... 💌</h1>
+        <p><strong>Mas antes... que dia foi o nosso primeiro beijo?</strong></p>
+        <p>Eu sei que você não é muito boa com datas e memória também não é seu forte 😅</p>
+        <p>Então, vou ser bonzinho: <strong>você tem três chances, viu?</strong> Kkk 💋❤️</p>
+        <input type="text" id="dataDigitada" placeholder="Ex: 22/06/2025 kkkkk"/>
+        <button onclick="verificarData()">Enviar</button>
+        <p id="mensagemData"></p>
+        <button id="tentarNovamente" onclick="resetarTentativa()" style="display: none;">
+          Tente Novamente, Meu Amor! ❤️
+        </button>
+      </div>
+    </section>
+
+    <!-- CARTA -->
+    <section id="carta-section" style="display: none;">
+      <div class="carta-container" onclick="abrirCarta()">
+        <div class="carta-icon">💖</div>
+        <p class="carta-texto">Tekinha, clique para abrir sua carta</p>
+      </div>
+    </section>
+
+    <!-- CONTEÚDO DA CARTA -->
+    <section id="surpresa" style="display: none;">
+      <div id="fundo-carta"></div>
+      <div id="sobre-foto">
+        <div class="cobertura">Um pedacinho do meu coração está aqui 👇❤️</div>
+        <img src="foto2.jpg" alt="Foto dela" id="foto" />
+      </div>
+      <p id="mensagem">
+        Meu amor, hoje é o seu dia! 💖<br>
+        Que Deus te abençoe imensamente.<br>
+        Eu te amo mais do que as palavras podem expressar.<br>
+        <strong>Clique em “Te amo” 20 vezes para liberar sua cartinha... kkk 💌</strong>
+      </p>
+      <button onclick="contarAmor()" id="valor_texto">Te amo ❤️ (<span id="contador">0</span>)</button>
+    </section>
+
+    <!-- SURPRESA FINAL -->
+    <section id="idade-surpresa" style="display: none;">
+      <img src="foto-abraco.jpg" alt="Foto especial" id="foto-surpresa" />
+      <div class="mensagem-final">
+        <h1>Parabéns pelos seus 20 anos, meu amor! 💗</h1> <br>
+        <p>Que venham muitos anos juntos, te amando cada vez mais.</p><br>
+
+        <h2>Inspirada na história de Tamar (Gênesis 38)</h2>
+
+        <p><strong>Tekinha,</strong> na Bíblia, existe uma mulher chamada <strong>Tamar</strong>. Ela foi prometida a uma bênção que parecia nunca chegar. Ela esperou. Esperou tanto que, em um momento de dor e abandono, decidiu tomar as rédeas da história com as próprias mãos do seu jeito, na sua força, no seu tempo.</p>
+
+        <p>E embora Deus tenha tido misericórdia dela, a sua história hoje me lembra alguém completamente diferente: <strong>você, Tekinha...</strong>.</p>
+
+        <p>Porque você esperou... Mas não foi do seu jeito. <strong>Foi do jeito de Deus.</strong></p>
+
+        <p>Esses <strong>20 cliques</strong> que você deu aqui não são só parte de uma surpresa. São símbolo da tua <strong>espera com fé</strong>, da tua <strong>perseverança</strong>, da tua capacidade de <strong>confiar mesmo sem ver o final</strong>.</p>
+
+        <p>Cada clique é como um <em>“ainda não”</em>... Mas você não desistiu, não tentou apressar, não forçou a porta. Você continuou <strong>clicando, acreditando, sorrindo</strong>.</p>
+
+        <p>E por isso, <strong>eu te honro</strong>. Porque ao contrário de Tamar, que deu um jeitinho... Você deu espaço para o <strong>milagre</strong>. Você mostrou que sabe esperar <strong>mesmo em meio às lutas</strong>.</p>
+
+        <p>Hoje eu te olho e vejo uma mulher que não foi moldada pela pressa, mas <strong>lapidada pela promessa</strong>. Uma mulher que Deus preparou com carinho, e que Ele me entregou <strong>na hora exata</strong>.</p>
+
+        <p>Você não apenas clicou 20 vezes... Você <strong>esperou "20 anos" com amor</strong>. E o amor verdadeiro sempre chega <strong>no tempo certo</strong>.</p>
+
+        <p>Como Tamar, você foi vista. Mas diferente dela, <strong>você não precisou se disfarçar pra ser reconhecida</strong>. Você é <strong>amada exatamente como é</strong>.</p>
+
+        <p>E hoje, a promessa se cumpre de um jeito só nosso: Com <strong>alegria</strong>, com <strong>fé</strong> e com <strong>você ao meu lado</strong>.</p>
+
+        <h3>Feliz Aniversário, Tekinha!🎉</h3>
+        <p>Hoje o céu celebra junto comigo a existência da garota que eu amo.</p>
+        <p><strong>Eu TE AMO</strong>. E como Jesus restaurou Tamar com dignidade <strong>Eu quero sempre te honrar com amor ❤️ ❤️ </strong></p>
+      </div>
+    </section>
+  </main>
+
+  <audio loop id="musica">
+    <source src="musica.mp3" type="audio/mpeg" />
+  </audio>
+</body>
+
+</html>
