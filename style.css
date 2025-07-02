@@ -7,9 +7,20 @@
 
 body,
 html {
-  overflow-x: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   font-family: 'Segoe UI', sans-serif;
   background-color: black;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* TOPO COM FOTO RETANGULAR E DEGRADE */
@@ -33,7 +44,7 @@ html {
   left: 0;
   right: 0;
   height: 50%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
 }
 
 /* INÍCIO */
@@ -69,13 +80,15 @@ html {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   text-align: center;
+  font-family: "Fredoka", sans-serif;
 }
 
 p {
   margin-top: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   line-height: 1.6;
   /* Altura das linhas dentro do parágrafo */
   text-align: justify;
@@ -125,7 +138,7 @@ p {
   background-image:
     linear-gradient(to top, rgba(0, 0, 0, 1), transparent),
     url('cachorro1.jpg');
-  background-position-y: -200px;
+  background-position-y: -250px;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -144,7 +157,7 @@ p {
   background: rgba(255, 192, 203, 0.3);
   padding: 30px 40px;
   border-radius: 25px;
-  box-shadow: 0 0 15px #ffb6c1;
+  box-shadow: 0 0 15px #ffb6c175;
   cursor: pointer;
   text-align: center;
   transition: background-color 0.3s ease;
@@ -154,6 +167,7 @@ p {
   user-select: none;
   z-index: 1;
   overflow: hidden;
+  width: 95%;
 }
 
 /* Imagem de fundo desfocada */
@@ -174,6 +188,8 @@ p {
 .carta-container * {
   position: relative;
   z-index: 1;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 300;
 }
 
 .carta-container:hover {
@@ -237,29 +253,61 @@ p {
 }
 
 .cobertura {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 300;
   background-color: rgba(255, 192, 203, 0.8);
   padding: 10px;
   border-radius: 10px;
   color: #800040;
   margin-bottom: 10px;
-  max-width: 80%;
+  max-width: 90%;
   margin: 20px auto 10px;
   font-weight: bold;
   position: relative;
   z-index: 2;
 }
 
-#foto {
+/* #foto {
   width: 250px;
   border-radius: 20px;
   box-shadow: 0 0 15px #ffffff52;
   position: relative;
   z-index: 2;
 
+} */
+
+#carousel-container {
+  width: 100%;
+  max-width: 320px;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 20px auto;
+  box-shadow: 0 0 15px #ffffff52;
+}
+
+.carousel {
+  display: flex;
+  gap: 10px;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.carousel img {
+  flex-shrink: 0;
+  width: 300px;
+  border-radius: 20px;
+  object-fit: cover;
 }
 
 #mensagem {
   font-size: 1.2em;
+  font-weight: 300;
   color: #fff;
   background: rgba(0, 0, 0, 0.6);
   margin: 30px auto;
@@ -271,6 +319,8 @@ p {
 }
 
 button {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
   background: #ff4d88;
   color: white;
   padding: 12px 20px;
@@ -297,11 +347,12 @@ button:hover {
 }
 
 #foto-surpresa {
-  width: 220px;
-  border-radius: 25px;
-  box-shadow: 0px 0px 20px #ffffff72;
-  margin-bottom: 20px;
+  width: 330px;
+  border-radius: 10px;
+  /* box-shadow: 0px 0px 20px #ffffff72; */
+  margin-bottom: 40px;
   position: relative;
+  
 }
 
 /* Aplicar degradê em foto-surpresa */
@@ -372,4 +423,27 @@ button:hover {
     font-size: 1.3em;
     margin-bottom: 10px;
   }
+}
+
+.footer-romantico {
+  background-color: #ffe6f0;
+  /* Rosa claro */
+  color: #b30059;
+  /* Rosa escuro */
+  text-align: center;
+  padding: 1px 1px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1em;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+}
+
+.footer-romantico>p {
+  text-align: center;
+}
+
+.footer-romantico strong {
+  color: #ff4081;
 }

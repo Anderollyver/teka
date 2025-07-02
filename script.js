@@ -12,10 +12,11 @@ function verificarData() {
     } else {
         tentativas--;
         if (tentativas > 0) {
-            mensagem.innerText = `Ops! Data errada, Tekinha... você ainda tem (${tentativas}) tentativa(s).`;
+            mensagem.innerHTML = `Ops! Data errada, Tekinha... você ainda tem <strong>(${tentativas})</strong> tentativa(s).`;
         } else {
             mensagem.innerHTML = `
-        Vamos 'fingir' que você não sabe a data... kkk 😅
+        Vamos 'fingir' que você não sabe a data... 😅<br>
+        <br>
         Nossa Tekinha, Você errou 3 vezes... 😢<br>
         Mas assim é o amor: <strong>sempre há perdão</strong>.<br>
         Como o amor de Cristo pela igreja, eu sempre te darei novas chances. 💖
@@ -85,3 +86,21 @@ function criarCoracao() {
         }
     }, 10);
 }
+
+const carousel = document.getElementById("carousel");
+
+function rolarFotos() {
+    const scrollAmount = carousel.scrollLeft + 1;
+
+    if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
+        // Chegou no final, volta para o início
+        carousel.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+        // Continua rolando
+        carousel.scrollLeft = scrollAmount;
+    }
+}
+
+// Faz rolar a cada 20ms (pode ajustar)
+setInterval(rolarFotos, 20);
+
