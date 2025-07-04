@@ -79,7 +79,7 @@ main {
   color: #ff8db3;
 }
 
-.caixa > h1 > a {
+.caixa>h1>a {
   color: #ffccdd;
 }
 
@@ -269,6 +269,7 @@ p {
   font-weight: bold;
   position: relative;
   z-index: 2;
+  text-shadow: 1px 1px 1px #00000031;
 }
 
 /* #foto {
@@ -294,12 +295,15 @@ p {
   gap: 10px;
   scroll-behavior: smooth;
   overflow-x: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE/Edge */
 }
 
 .carousel::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
+  display: none;
+  /* Chrome/Safari */
 }
 
 .carousel img {
@@ -356,7 +360,7 @@ button:hover {
   /* box-shadow: 0px 0px 20px #ffffff72; */
   margin-bottom: 40px;
   position: relative;
-  
+
 }
 
 /* Aplicar degradê em foto-surpresa */
@@ -375,64 +379,87 @@ button:hover {
 /* Mensagem final */
 /* Mensagem final aprimorada para Android */
 .mensagem-final {
-  font-size: 1.4em;
-  /* fonte um pouco maior */
-  color: #fff;
-  background-color: rgba(255, 105, 180, 0.95);
-  padding: 35px 30px;
-  /* mais espaço interno */
-  border-radius: 20px;
-  max-width: 520px;
-  margin: 20px auto;
-  /* margem para separar do topo */
-  line-height: 1.8;
-  /* maior espaçamento entre linhas */
-  box-shadow: 0 0 20px #ff69b4cc;
-  font-weight: 500;
+  font-size: 1.5em;
+  font-family: 'Dancing Script', cursive;
+  color: #fffafc;
+  background: linear-gradient(135deg, #ffd9ec 0%, #ffb6c1 100%);
+  padding: 40px 35px;
+  border-radius: 30px;
+  max-width: 620px;
+  margin: 30px auto;
+  line-height: 2.1;
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.6);
   text-align: justify;
-  /* justificado para melhor fluxo */
+  position: relative;
+  border: 2px solid #ff69b4;
 }
 
-/* Títulos dentro da mensagem */
+.mensagem-final::before {
+  content: "❝";
+  font-size: 60px;
+  position: absolute;
+  top: -30px;
+  left: 25px;
+  color: rgba(255, 255, 255, 0.2);
+  font-family: serif;
+}
+
+.mensagem-final::after {
+  content: "❞";
+  font-size: 60px;
+  position: absolute;
+  bottom: -30px;
+  right: 25px;
+  color: rgba(255, 255, 255, 0.2);
+  font-family: serif;
+}
+
 .mensagem-final h1,
 .mensagem-final h2,
 .mensagem-final h3 {
-  margin-bottom: 14px;
-  color: #ffccdd;
-  line-height: 1.3;
+  color: #b30059;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* Destaques */
+.mensagem-final p {
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: #984762;
+}
+
 .mensagem-final strong {
-  color: white;
+  color: #ffffff;
+  font-weight: 700;
+  background: rgba(255, 105, 180, 0.25);
+  padding: 2px 4px;
+  border-radius: 6px;
 }
 
 .mensagem-final em {
   font-style: italic;
-  color: #ffc0cb;
+  color: #ffe0eb;
 }
 
-.mensagem-final > p {
-  font-family: "Dancing Script", cursive;
-  
-}
-
-/* Responsividade para Android (e telas pequenas) */
 @media (max-width: 600px) {
   .mensagem-final {
-    font-size: 1.15em;
+    font-size: 1.2em;
     padding: 25px 20px;
-    line-height: 1.6;
-    max-width: 90%;
+    line-height: 1.8;
+    max-width: 95%;
   }
 
   .mensagem-final h1,
   .mensagem-final h2,
   .mensagem-final h3 {
-    font-size: 1.3em;
-    margin-bottom: 10px;
+    font-size: 1.5em;
+    margin-bottom: 12px;
   }
 }
+
 
 .footer-romantico {
   background-color: #ffe6f0;
@@ -449,11 +476,11 @@ button:hover {
   width: 100%;
 }
 
-.footer-romantico > p {
+.footer-romantico>p {
   text-align: center;
 }
 
 .footer-romantico a {
   color: #ff4081;
-  
+
 }
