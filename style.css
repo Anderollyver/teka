@@ -79,6 +79,10 @@ main {
   color: #ff8db3;
 }
 
+.caixa > h1 > a {
+  color: #ffccdd;
+}
+
 h1,
 h2,
 h3 {
@@ -408,6 +412,11 @@ button:hover {
   color: #ffc0cb;
 }
 
+.mensagem-final > p {
+  font-family: "Dancing Script", cursive;
+  
+}
+
 /* Responsividade para Android (e telas pequenas) */
 @media (max-width: 600px) {
   .mensagem-final {
@@ -440,10 +449,11 @@ button:hover {
   width: 100%;
 }
 
-.footer-romantico>p {
+.footer-romantico > p {
   text-align: center;
 }
 
-.footer-romantico strong {
+.footer-romantico a {
   color: #ff4081;
+  
 }
