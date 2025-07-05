@@ -58,7 +58,7 @@ main {
 }
 
 .caixa {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(255, 255, 255, 0.042);
   color: #fff;
   padding: 30px;
   border-radius: 20px;
@@ -67,6 +67,8 @@ main {
   width: 90%;
   margin-top: -60px;
   z-index: 1;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(255, 105, 180, 0.19);
 }
 
 .caixa h1 {
