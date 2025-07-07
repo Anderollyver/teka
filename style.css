@@ -68,7 +68,7 @@ main {
   margin-top: -60px;
   z-index: 1;
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(255, 105, 180, 0.19);
+  box-shadow: 0 4px 20px rgba(255, 105, 180, 0.337);
 }
 
 .caixa h1 {
@@ -92,6 +92,17 @@ h3 {
   font-family: "Fredoka", sans-serif;
 }
 
+.linha-topo {
+  border: none;
+  height: 3px;
+  background-color: #ff92b2;
+  width: 80px;
+  margin: 0 auto 1rem;
+  /* centraliza e dá espaço abaixo */
+  border-radius: 3px;
+}
+
+
 p {
   margin-top: 8px;
   margin-bottom: 10px;
@@ -101,7 +112,7 @@ p {
 }
 
 .caixa input {
-  width: 80%;
+  width: 90%;
   padding: 10px;
   border-radius: 10px;
   border: none;
@@ -112,6 +123,7 @@ p {
 
 .caixa button {
   background: #ff4d88;
+  width: 30%;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -173,7 +185,7 @@ p {
   user-select: none;
   z-index: 1;
   overflow: hidden;
-  width: 95%;
+  width: 90%;
 }
 
 /* Imagem de fundo desfocada */
@@ -326,6 +338,7 @@ p {
   border-radius: 15px;
   z-index: 2;
   position: relative;
+  box-shadow: 0 0 15px #ffb6c119;
 }
 
 button {
@@ -356,6 +369,60 @@ button:hover {
   z-index: 2;
 }
 
+.documentacao-romantica {
+  background: rgba(255, 240, 245, 0.1);
+  padding: 40px 30px;
+  border-radius: 25px;
+  max-width: 700px;
+  margin: 50px auto;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.255);
+  font-family: 'Poppins', sans-serif;
+}
+
+.documentacao-romantica h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #ff92b2;
+  margin-bottom: 30px;
+}
+
+.documentacao-romantica>p {
+  font-size: 1.05rem;
+  color: #ffe3ec;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 25px;
+  padding: 0 5px;
+}
+
+.linha-documentacao {
+  border: none;
+  height: 4px;
+  background-color: #ff92b2;
+  width: 100px;
+  margin: 0 auto 20px;
+  border-radius: 3px;
+}
+
+.registro-romantico {
+  border-left: 4px solid #ff92b2;
+  padding-left: 15px;
+  margin-bottom: 25px;
+}
+
+.registro-romantico h3 {
+  color: #ffc1d9;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.registro-romantico p {
+  font-size: 1rem;
+  color: #ffe3ec;
+  line-height: 1.6;
+  text-align: justify;
+}
+
 #foto-surpresa {
   width: 330px;
   border-radius: 10px;
@@ -375,11 +442,7 @@ button:hover {
   pointer-events: none;
 }
 
-/* Para uma melhor solução, use um container para aplicar degradê na foto-surpresa */
-/* Alternativa: Envolver imagem em div e aplicar degradê nessa div */
-
 /* Mensagem final */
-/* Mensagem final aprimorada para Android */
 .mensagem-final {
   font-size: 1.5em;
   font-family: 'Dancing Script', cursive;
