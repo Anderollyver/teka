@@ -5,10 +5,6 @@ function verificarData() {
     const mensagem = document.getElementById("mensagemData");
     const btnTentar = document.getElementById("tentarNovamente");
 
-    if (resposta.length === 0) {
-        mensagem.innerHTML = '[Ops!] Você precisa colocar uma data, Moranguinho.'
-    }
-
     if (resposta === "08/06/2025") {
         mensagem.innerText = "Data correta! ❤️";
         document.getElementById("inicio").style.display = "none";
