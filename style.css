@@ -50,6 +50,7 @@ main {
 /* INÍCIO */
 #inicio {
   background: url('flor.gif') center center/cover no-repeat;
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -59,8 +60,6 @@ main {
 
 .caixa {
   background: rgba(255, 255, 255, 0.042);
-  
-  background-size: cover;
   color: #fff;
   padding: 30px;
   border-radius: 20px;
