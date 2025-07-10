@@ -5,7 +5,7 @@ function verificarData() {
     const mensagem = document.getElementById("mensagemData");
     const btnTentar = document.getElementById("tentarNovamente");
 
-    if (resposta === "08/06/2025") {
+    if (resposta === "08/06/2025" || resposta === "8/6/2025") {
         mensagem.innerText = "Data correta! ❤️";
         document.getElementById("inicio").style.display = "none";
         document.getElementById("carta-section").style.display = "flex";

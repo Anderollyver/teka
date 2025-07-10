@@ -50,7 +50,6 @@ main {
 /* INÍCIO */
 #inicio {
   background: url('flor.gif') center center/cover no-repeat;
-  background-size: cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -158,7 +157,7 @@ p {
   background-image:
     linear-gradient(to top, rgba(0, 0, 0, 1), transparent),
     url('cachorro1.jpg');
-  background-position-y: -250px;
+  background-position-y: -100px;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -343,6 +342,11 @@ p {
   box-shadow: 0 0 15px #ffb6c119;
 }
 
+#p_mensagem {
+  color: #ff8db3;
+  margin: 30px auto 30px;
+}
+
 button {
   font-family: "Fredoka", sans-serif;
   font-weight: 600;
@@ -402,8 +406,9 @@ button:hover {
   height: 4px;
   background-color: #ff92b2;
   width: 100px;
-  margin: 0 auto 20px;
+  margin: 40px auto 40px;
   border-radius: 3px;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.255);
 }
 
 .registro-romantico {
@@ -434,7 +439,7 @@ button:hover {
 
 }
 
-/* Aplicar degradê em foto-surpresa */
+/* degradê em foto-surpresa */
 #foto-surpresa::after {
   content: "";
   position: absolute;
