@@ -17,9 +17,9 @@ function verificarData() {
             mensagem.innerHTML = `
         Vamos 'fingir' que você não sabe a data... 😅<br>
         <br>
-        Nossa Tekinha, Você errou 3 vezes... 😢<br>
-        Mas assim é o amor: <strong>sempre há perdão</strong>.<br>
-        Como o amor de Cristo pela igreja, eu sempre te darei novas chances. 💖
+        Mesmo quando erramos, Deus nos dá novas chances.
+        E como Ele nos ama, eu também sempre vou te amar, mesmo nas falhas. 💞
+        Vamos recomeçar juntos.
       `;
             btnTentar.style.display = "inline-block";
             document.getElementById("dataDigitada").disabled = true;
@@ -58,7 +58,7 @@ function contarAmor() {
         const valor_texto = document.getElementById('valor_texto')
         mostrarIdadeSurpresa();
         valor_texto.innerText = 'Eita, Tekinha... você é ligeira mesmo! 😄💖'
-        
+
     }
 }
 
@@ -91,24 +91,36 @@ function criarCoracao() {
 const carousel = document.getElementById("carousel");
 
 let isResetting = false;
+let isTouching = false;
+let intervalId;
 
 function rolarFotos() {
-    if (isResetting) return;
+    if (isResetting || isTouching) return;
 
     const scrollAmount = carousel.scrollLeft + 1;
 
     if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
-        // Evita travamento e dá uma pausa antes de voltar
         isResetting = true;
         setTimeout(() => {
             carousel.scrollTo({ left: 0, behavior: 'smooth' });
             isResetting = false;
-        }, 500); // 500ms de pausa antes de voltar
+        }, 500);
     } else {
         carousel.scrollLeft = scrollAmount;
     }
 }
 
-setInterval(rolarFotos, 20);
+// Inicia o scroll automático
+intervalId = setInterval(rolarFotos, 20);
+
+// Pausa ao tocar
+carousel.addEventListener("touchstart", () => {
+    isTouching = true;
+});
+
+// Retoma ao parar de tocar
+carousel.addEventListener("touchend", () => {
+    isTouching = false;
+});
 
 
