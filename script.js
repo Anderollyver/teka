@@ -56,8 +56,9 @@ function contarAmor() {
 
     if (contador === 20) {
         const valor_texto = document.getElementById('valor_texto')
-        valor_texto.innerText = 'Eita, Tekinha... você é ligeira mesmo! 😄💖'
         mostrarIdadeSurpresa();
+        valor_texto.innerText = 'Eita, Tekinha... você é ligeira mesmo! 😄💖'
+        
     }
 }
 
@@ -89,18 +90,25 @@ function criarCoracao() {
 
 const carousel = document.getElementById("carousel");
 
+let isResetting = false;
+
 function rolarFotos() {
+    if (isResetting) return;
+
     const scrollAmount = carousel.scrollLeft + 1;
 
     if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
-        // Chegou no final, volta para o início
-        carousel.scrollTo({ left: 0, behavior: 'smooth' });
+        // Evita travamento e dá uma pausa antes de voltar
+        isResetting = true;
+        setTimeout(() => {
+            carousel.scrollTo({ left: 0, behavior: 'smooth' });
+            isResetting = false;
+        }, 500); // 500ms de pausa antes de voltar
     } else {
-        // Continua rolando
         carousel.scrollLeft = scrollAmount;
     }
 }
 
-// Faz rolar a cada 20ms (pode ajustar)
 setInterval(rolarFotos, 20);
+
 
