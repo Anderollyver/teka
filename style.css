@@ -75,6 +75,20 @@ main {
   font-size: 2em;
   color: #ffccdd;
   margin-bottom: 10px;
+  animation: flutuar 3s ease-in-out infinite;
+  margin: 10px 0px 30px 0px;
+}
+
+@keyframes flutuar {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 .caixa p strong {
@@ -362,7 +376,7 @@ button {
   position: relative;
   z-index: 2;
   transition: background-color 0.3s ease;
-  
+
 }
 
 button:hover {
