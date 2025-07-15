@@ -68,7 +68,22 @@ main {
   margin-top: -60px;
   z-index: 1;
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(255, 105, 180, 0.337);
+  /* box-shadow: 0 4px 20px rgba(255, 105, 180, 0.337); */
+  animation: sombraRosa 3.5s ease-in-out infinite;
+}
+
+@keyframes sombraRosa {
+  0% {
+    box-shadow: 0 0 8px #ffb6c1;
+  }
+
+  50% {
+    box-shadow: 0 0 20px #ff69b4;
+  }
+
+  100% {
+    box-shadow: 0 0 8px #ffb6c1;
+  }
 }
 
 .caixa h1 {
