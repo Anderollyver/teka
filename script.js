@@ -5,7 +5,7 @@ function verificarData() {
     const mensagem = document.getElementById("mensagemData")
     const btnTentar = document.getElementById("tentarNovamente")
 
-    if (resposta === "08/06/2025") {
+    if (resposta === "08/06/2025" || resposta === "8625") {
         mensagem.innerText = "Data correta! ❤️"
         document.getElementById("inicio").style.display = "none"
         document.getElementById("carta-section").style.display = "flex"
@@ -22,7 +22,7 @@ function verificarData() {
         Vamos recomeçar juntos.
       `
 
-            // Toca o áudio de erro
+            // Tocar o áudio de erro
             const audioErro = new Audio('errou.mp3');
             audioErro.play().catch((error) => {
                 console.log("Erro ao tocar o áudio de erro:", error)
@@ -65,7 +65,6 @@ function contarAmor() {
         const valor_texto = document.getElementById('valor_texto')
         mostrarIdadeSurpresa()
         valor_texto.innerText = 'Eita, Tekinha... você é ligeira mesmo! 😄💖'
-
     }
 }
 
