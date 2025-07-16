@@ -526,7 +526,8 @@ button:hover {
 
 .mensagem-final p {
   margin-bottom: 20px;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 23px;
   color: #984762;
 }
 
