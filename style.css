@@ -94,6 +94,10 @@ main {
   margin: 10px 0px 30px 0px;
 }
 
+.caixa p {
+  text-align: center;
+}
+
 @keyframes flutuar {
 
   0%,
@@ -370,6 +374,7 @@ p {
   z-index: 2;
   position: relative;
   box-shadow: 0 0 15px #ffb6c119;
+  text-align: center;
 }
 
 #p_mensagem {
