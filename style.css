@@ -236,6 +236,11 @@ p {
   z-index: 0;
 }
 
+.carta-container #morango-img {
+  width: 20%;
+  
+}
+
 /* Ícones e texto acima da imagem */
 .carta-icon,
 .carta-texto,
