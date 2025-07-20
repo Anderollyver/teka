@@ -21,6 +21,7 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
+  
 }
 
 /* TOPO COM FOTO RETANGULAR E DEGRADE */
@@ -574,6 +575,7 @@ button:hover {
 
 
 .footer-romantico {
+  bottom: 0;
   background-color: #ffe6f0;
   /* Rosa claro */
   color: #b30059;
