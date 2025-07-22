@@ -74,7 +74,7 @@ function mostrarIdadeSurpresa() {
 
 function criarCoracao() {
     const coracao = document.createElement("div")
-    coracao.innerText = "❤️"
+    coracao.innerText = "🍓"
     coracao.style.position = "fixed"
     coracao.style.left = Math.random() * 90 + "vw"
     coracao.style.top = "-20px"
