@@ -13,7 +13,7 @@ html {
   overflow: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: black;
 }
 
@@ -21,7 +21,7 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  
+
 }
 
 /* TOPO COM FOTO RETANGULAR E DEGRADE */
@@ -239,7 +239,7 @@ p {
 
 .carta-container #morango-img {
   width: 90px;
-  
+
 }
 
 /* Ícones e texto acima da imagem */
@@ -572,7 +572,6 @@ button:hover {
     margin-bottom: 12px;
   }
 }
-
 
 .footer-romantico {
   bottom: 0;
