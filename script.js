@@ -15,7 +15,6 @@ function verificarData() {
             mensagem.innerHTML = `Ops! Data errada, Tekinha... você ainda tem <strong>(${tentativas})</strong> tentativa(s).`;
         } else {
             mensagem.innerHTML = `
-        Vamos 'fingir' que você não sabe a data... 😅<br>
         <br>
         Mesmo quando erramos, Deus nos dá novas chances.
         E como Ele nos ama, eu também sempre vou te amar, mesmo nas falhas. 💞

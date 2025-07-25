@@ -338,6 +338,8 @@ p {
 }
 
 #carousel {
+  width: 100%;
+  max-width: 380px;
   display: flex;
   gap: 10px;
   scroll-behavior: smooth;
