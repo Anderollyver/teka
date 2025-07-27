@@ -590,6 +590,7 @@ button:hover {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   width: 100%;
+  z-index: 5;
 }
 
 .footer-romantico>p {
